@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <title>WNSites - formularz</title>
+    <link rel="icon" href="wnsites.png">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="marka">
+            <a href="index.html"><img src="wnsites.png" alt="logo"></a>
+            <a href="index.html"><h1>WNSites</h1></a>
+        </div>
+        <h1>Twoja nowa strona internetowa!</h1>
+        <div class="dropdown">
+            <a href="index.html" class="powrot">Powrót na stronę główną</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <form action="https://formspree.io/f/xvzwvrab" method="post">
+             <label for="imie">Nazwa:<input type="text" name="imie" id="imie" placeholder="Np. Tomasz"></label><br>
+            <label for="mail">Email:<input type="email" name="mail" id="mail" placeholder="Np. TomaszJ@gmail.com"></label><br>
+            <label for="telefon">Nr. telefonu:<input type="tel" name="telefon" id="telefon" placeholder="Np. 555-555-555"></label>
+            <p>Wybierz usługę:</p>
+            <input type="radio" name="usluga" value="Nowa" id="nowa"><label for="nowa">Nowa strona internetowa</label><br>
+            <input type="radio" name="usluga" value="Stara" id="Stara"><label for="Stara">Poprawienie starej strony internetowej</label>
+            <p>Opis:</p>
+            <textarea name="opis" id="opis" placeholder="Opisz jak chcesz żeby wyglądała twoja strona internetowa"></textarea> <br>
+            <input type="radio" id="antybot" style="display: none;">
+            <button type="submit">Wyslij formularz!</button>
+        </form>
+    </main>
+    <footer class="kontakt">
+        <div class="kontaktowy">
+            <span class="nazwa">WNSites - twoja nowa strona internetwa</span><br>
+            Numer telefonu: <a href="tel:511-254-430" class="cta"> 511-254-430</a><br>
+            Kontakt mail: <a href="mailto:kontakt.wnsites@gmail.com" class="cta">kontakt.wnsites@gmail.com</a>
+        </div>
+        <div>
+            <a href="index.html" class="powrot">Powrót na stronę główną</a>
+        </div>
+        <div id="socjale">
+            <a href="https://www.instagram.com/wnsites/" target="_blank"><img src="ig.png" alt="Instagram" class="socjal"></a>
+            <a href="https://www.instagram.com/wnsites/" target="_blank"><img src="fb.png" alt="facebook" class="socjal"></a>
+            <a href="https://www.instagram.com/wnsites/" target="_blank"><img src="tiktok.png" alt="Tiktok" class="socjal"></a>
+    </footer>
+</body>
+</html>

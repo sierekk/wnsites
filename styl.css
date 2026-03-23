@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Znamenny+Musical+Notation&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+body{
+   font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+}
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+section{
+    animation: fadeIn 0.8s ease;
+}
+.marka{
+    display: flex;
+    padding: 5px;
+    text-align: center;
+    gap: 10px;
+    color: #fff;
+    align-items: center;
+}
+header{
+    background-color: #6A0DAD;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    font-family: "Roboto Condensed", sans-serif;
+}
+header img{
+    height: 50px;
+    width: auto;
+    border-radius: 10px;
+}
+header a{
+    text-decoration: none;
+    color: #fff;
+}
+header a:hover{
+    text-decoration: underline;
+}
+header h1{
+    text-align: center;
+    color: #fff;
+    justify-self: center;
+    padding: 10px;
+}
+.dropdown{
+    display: inline-block; 
+    justify-self: end;
+    align-self: center;
+    padding: 10px;
+}
+.dropdown button{
+    background-color: #6A0DAD; 
+    color: white;
+    font-size: 120%;
+    border: none;
+    padding: 10px;
+    min-width: 6vw;
+    /* border-radius: 10px; */
+}
+.dropdown a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    
+}
+.dropdown .kontent{
+    display: none;
+    background-color: rgb(164, 89, 235);
+    position: absolute;
+    min-width: 6vw;
+    text-align: center;
+    z-index: 3;
+    margin-right: 5px;
+}
+.dropdown.active .kontent{
+    display: block;
+}
+.dropdown.active button{
+    background-color: hsla(271, 78%, 64%, 0.452)
+}
+.dropdown:hover .kontent{
+    display: block;
+}
+.dropdown:hover button{
+    background-color: hsla(271, 78%, 64%, 0.452);
+}
+.dropdown a:hover {
+    background-color: rgb(140, 55, 219);
+}
+.menu{
+    padding: 30px;
+}
+.menu img{
+    height: 200px;
+    
+}
+#lewy, #prawy{
+    height: 150px;
+    padding: 15px;
+}
+.onas{
+    text-align: center;
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    margin: 0;
+    overflow: hidden;
+}
+.onas::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(tlo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(10px);  
+    z-index: 0;
+    margin: 0px;
+}
+.onas::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45); 
+    z-index: 1;
+}
+.onas *{
+ position: relative;
+ z-index: 2;
+}
+.onas a{
+    display: inline-block;
+    text-decoration: none;
+    color: #3AC37D;
+    font-size: 110%;
+    padding: 15px;
+    transition: 0.5s;
+    margin: 30px;
+    border-radius: 15px;
+}
+.onas a:hover{
+    transform: scale(1.15);
+    background-color: #3AC37D;
+    color: #FFF; 
+    
+}
+.onas-kontent{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+.onas-kontent p{
+    color: #FFF;
+    font-size: 120%;
+    padding: 15px;
+    text-align: left;
+}
+.onas-kontent h2{
+    text-align: center;
+    font-size: 200%;
+    color: #FFF;
+}
+.onas-kontent img{
+    height: 200px;
+    width: auto;
+}
+.Naszaoferta{
+    text-align: center;
+}
+.Naszaoferta h2{
+    font-size: 200%;
+}
+.Naszaoferta a{
+    display: inline-block;
+    text-decoration: none;
+    color: #3AC37D;
+    font-size: 110%;
+    padding: 15px;
+    transition: 0.5s;
+    margin: 30px;
+    border-radius: 15px;
+}
+.Naszaoferta a:hover{
+    transform: scale(1.15);
+    background-color: #3AC37D;
+    color: #FFF; 
+    
+}
+.oferta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+.usluga{
+    overflow: hidden;
+    color: white;
+    min-width: 60%;
+}
+.opis{
+    cursor: pointer;
+    background-color:#6A0DAD;
+    font-size: 150%;
+    padding: 15px;
+}
+.tresc{
+    background-color: hsl(271, 82%, 57%);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease, padding 0.5s ease;
+}
+.tresc li{
+    text-align: center;
+    list-style-position:inside;
+}
+.slider{
+    background-color: #2D2D2D;
+    padding: 30px;
+}
+.slider h2{
+    font-size: 220%;
+    color: #FFF;
+}
+.slider div{
+    display: flex;
+    justify-content: center;
+    align-content: center ;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+.slider h2{
+    text-align: center;
+    font-size: 250%;
+}
+.slides{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slides img{
+    width: 50%;
+    display: none;
+    margin: 0 auto;
+}
+.slider img{
+    width: 80%;
+    display: none;
+    border: 1px #fff solid;
+    border-radius: 10px;
+}
+.slides a{
+    text-align: center;
+}
+img.displaySlide{
+    display: block;
+    animation-name: animation;
+    animation-duration: 0.5s;
+}
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 15px;
+    background-color: hsla(0, 0%, 0%, 0.37);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 200%;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    outline: 0;
+    text-align: center;
+} 
+.prev{
+    left: 0%;
+}
+.next{
+    right: 0%;
+}
+@keyframes animation{
+    from{opacity:  .5;}
+    to{opacity: 1;}
+}
+#Kontakt{
+    text-align: center;
+    font-size: 150%;
+    padding: 30px;
+    margin: 15px;
+    color: #2D2D2D;
+}
+#Kontakt a{
+    text-decoration: underline;
+    color: #3AC37D;
+}
+
+footer{
+    min-height: 8vh;
+    background-color: #6A0DAD;
+     color: white;
+     grid-template-columns: 1fr auto 1fr;
+     display: grid;
+     padding: 8px;
+}
+footer a{
+    text-decoration: none;
+    color: #3AC37D;
+}
+.glowna{
+     display: flex;
+     justify-content: space-between; 
+}
+footer img{
+    height: 30px;
+    width: auto;
+    transition: 0.3s;
+}
+footer img:hover{
+    transform: scale(1.1);
+}
+
+.nazwa{
+    font-size: 120%;
+}
+#socjale{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    padding: 5px;
+    float: right;
+}
+/* formularz */
+form{
+    text-align: center;
+    padding: 40px;
+    background-color: #2D2D2D;
+    color: white;
+}
+input{
+    margin: 15px;
+    border: none;
+    padding: 5px;
+    background-color:  #2D2D2D;
+    border-bottom: 2px solid white;
+    border-radius: 2px;
+    transition: 0.2s;
+    color: white;
+}
+input::placeholder{
+    color: white;
+}
+input:focus{
+    transform: scale(1.05);
+}
+button{
+    color:#2D2D2D;
+    padding: 10px;
+    margin: 10px;
+    font-size: 90%;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+textarea{
+    height: 30vh;
+    width: 40vw;
+    resize: none;
+    overflow: auto;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+textarea::placeholder{
+    padding-left: 15px;
+}
+.powrot{
+    font-size: 120%;
+    color: #3AC37D;
+    margin: 25px;
+    font-weight: 650;
+}
+@media (max-width: 768px){
+    header{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-around;
+        padding: 5px;
+    }
+    header h1{
+        display: none;
+    }
+    .onas::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(tlo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px);  
+    z-index: 0;
+    margin: 0px;
+}
+    .marka{
+        text-align: center;
+        justify-content: center;
+    }
+    .onas-kontent{
+        display: flex;
+        flex-direction: column;
+    }
+    .kontener{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        gap: 10px;
+    }
+    textarea{
+        width: 80%;
+    }
+}
+@media (max-width: 1600px){
+    .usluga{
+        min-width: 100%;
+    }
+}
+
