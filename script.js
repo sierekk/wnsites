@@ -1,5 +1,5 @@
 const dropdown = document.querySelector('.dropdown')
-const button = document.querySelector('button')
+const button = document.querySelector('.dropdown button')
 button.addEventListener('click', function(e){
     e.stopPropagation();
     dropdown.classList.toggle('active')

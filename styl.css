@@ -18,7 +18,9 @@ body{
 }
 section{
     animation: fadeIn 0.8s ease;
+    
 }
+
 .marka{
     display: flex;
     padding: 5px;
@@ -143,6 +145,7 @@ header h1{
  position: relative;
  z-index: 2;
 }
+
 .onas a{
     display: inline-block;
     text-decoration: none;
@@ -165,7 +168,7 @@ header h1{
     gap: 30px;
     align-items: center;
 }
-.onas-kontent p{
+.onas-kontent p,li{
     color: #FFF;
     font-size: 120%;
     padding: 15px;
@@ -185,6 +188,7 @@ header h1{
 }
 .Naszaoferta h2{
     font-size: 200%;
+    color: #2D2D2D;
 }
 .Naszaoferta a{
     display: inline-block;
@@ -297,6 +301,34 @@ img.displaySlide{
 .next{
     right: 0%;
 }
+.proces{
+    min-width: 100%;
+    text-align: center;
+}
+.proces h2{
+    color: #2D2D2D;
+}
+.proces div{
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: grid;
+    justify-content: center;
+}
+.krok{
+    padding: 15px;
+    margin: 15px;
+    background-color: #6A0DAD;
+    border-radius: 15px;
+    color: #fff;
+    transition: 0.4s;
+}
+.krok p{
+    padding: 15px;
+}
+.krok:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 10px 25px #2D2D2D;
+}
+
 @keyframes animation{
     from{opacity:  .5;}
     to{opacity: 1;}
@@ -454,5 +486,8 @@ textarea::placeholder{
     .usluga{
         min-width: 100%;
     }
+    .krok{
+        width: 80%;
+        justify-self: center;
+    }
 }
-
