@@ -506,5 +506,7 @@ textarea::placeholder{
     .opis{
         font-size: 110%;
     }
-    
+    .tresc{
+        font-size: 80%;
+    }
 }
