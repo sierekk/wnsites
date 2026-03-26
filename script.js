@@ -51,23 +51,25 @@ function nextSlide(){
 
 
 
-
 const uslugi = document.querySelectorAll('.oferta .usluga'); //bierzemy z query selectora div ofertra, w ktorym sa uslugi
 
 uslugi.forEach(usluga => { //dla kazdej uslugi zrob:
     const opis=usluga.querySelector('.opis') //pobierz jej opis
     const tresc=usluga.querySelector('.tresc') //pobierz jej tresc
+    const strzalka=usluga.querySelector('.strzalka')
     opis.addEventListener('click', () => { //klikniecie
         if(usluga.classList.contains('open')){ //jezeli usluga ma open to: zmien te style
             tresc.style.maxHeight= null
             tresc.style.paddingTop = 0
             tresc.style.paddingBottom = 0
             usluga.classList.remove('open')
+            strzalka.style.transform="rotate(0deg)"
         }else{ // w przeciwnym wypadku dodaj te style
             tresc.style.maxHeight= tresc.scrollHeight + 'px'
         tresc.style.paddingTop = '25px'
         tresc.style.paddingBottom = '25px'
         usluga.classList.add('open');
+        strzalka.style.transform="rotate(180deg)"
         }
         
     })
@@ -85,6 +87,9 @@ form.addEventListener("submit", function(e) {
         alert("Nie można wysłać formularza.");
     }
 });
+
+
+
 
 
 
