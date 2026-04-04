@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styl.css">
     <title>WNSites - formularz</title>
     <link rel="icon" href="wnsites.png">
-    <script src="script.js" defer></script>
+    <script src="formularz.js" defer></script>
 </head>
 <body>
     <header>
@@ -21,7 +21,20 @@
         </div>
     </header>
     <main>
-        Formularz jest obecnie w budowie :)
+        <form action="https://formspree.io/f/xvzwvrab" method="post">
+             <label for="imie">Nazwa:<input type="text" name="imie" id="imie" placeholder="Np. Tomasz"></label><br>
+            <label for="mail">Email:<input type="email" name="mail" id="mail" placeholder="Np. TomaszJ@gmail.com"></label><br>
+            <label for="telefon">Nr. telefonu:<input type="tel" name="telefon" id="telefon" placeholder="Np. 555-555-555"></label>
+            <p>Wybierz usługę:</p>
+            <input type="radio" name="usluga" value="Nowa" id="nowa"><label for="nowa">Nowa strona internetowa</label><br>
+            <input type="radio" name="usluga" value="Stara" id="Stara"><label for="Stara">Poprawienie starej strony internetowej</label>
+            <p>Opis:</p>
+            <textarea name="opis" id="opis" placeholder="Opisz jak chcesz żeby wyglądała twoja strona internetowa" required></textarea> <br>
+            <label for="zgoda"><input type="checkbox" id="zgoda" name="zgoda"> <span class="zgoda">Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a href="polityka.html" target="_blank">Polityką Prywatności</a></span></label><br>
+            <input type="checkbox" id="antybot" style="display: none;" name="antybot">
+            <p id="ostrzezenie"></p>
+            <button type="submit">Wyslij formularz!</button>
+        </form>
     </main>
     <footer class="kontakt">
         <div class="kontaktowy">

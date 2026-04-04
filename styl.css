@@ -168,11 +168,17 @@ header h1{
     gap: 30px;
     align-items: center;
 }
-.onas-kontent p,li{
+.onas-kontent p{
     color: #FFF;
     font-size: 120%;
     padding: 15px;
     text-align: left;
+}
+.onas-kontent li{
+    text-align: left;
+    color: #FFF;
+    font-size: 120%;
+    padding: 15px;
 }
 .onas-kontent h2{
     text-align: center;
@@ -437,6 +443,35 @@ textarea{
 textarea::placeholder{
     padding-left: 15px;
 }
+.zgoda {
+    font-size: 80%;
+}
+.zgoda a{
+    text-decoration: underline;
+    color: white;
+}
+.polityka ol,li{
+    padding: 30px;
+    text-align: center;
+}
+.polityka li, a{
+    list-style-position: inside;
+    margin-bottom: 15px; 
+    padding-left: 10px; 
+    color: #FFF;
+}
+.kontner-polityka{
+    text-align: left; 
+    background-color: #2D2D2D;
+    margin: -20px;
+    padding: 30px 50px; 
+}
+.kontner-polityka h2{
+    color: #FFF;
+    padding: 50px;
+    text-align: center;
+}
+
 .powrot{
     font-size: 120%;
     color: #3AC37D;

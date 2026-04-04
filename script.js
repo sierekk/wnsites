@@ -75,21 +75,6 @@ uslugi.forEach(usluga => { //dla kazdej uslugi zrob:
     })
 })
 
-const form = document.querySelector("form"); 
-
-form.addEventListener("submit", function(e) {
-    const antybot = document.getElementById("antybot");
-
-    
-    if(antybot.checked) { 
-        e.preventDefault(); // blokuje wysłanie
-        console.log("Formularz zablokowany - podejrzany bot");
-        alert("Nie można wysłać formularza.");
-    }
-});
-
-
-
 
 
 
